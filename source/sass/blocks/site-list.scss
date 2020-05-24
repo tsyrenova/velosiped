@@ -1,7 +1,13 @@
 .site-list {
   @include list-reset;
+  display: flex;
+  padding-left: 150px;
 }
 
-.site-item {
-  @include font-main(20px, 28px, $abbey);
+.site-list__item {
+  width: 200px;
+
+  &-link {
+    @include font-main(16px, 32px, $color-opacity--white-1);
+  }
 }

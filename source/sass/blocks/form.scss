@@ -16,7 +16,7 @@
 }
 
 .form__input {
-  @include font-main(15px, 24px, $cod-gray-50);
+  @include font-main(15px, 24px, $color-opacity--cod-gray-1);
   width: 288px;
   padding-top: 11px;
   padding-bottom: 10px;
