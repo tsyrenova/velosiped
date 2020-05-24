@@ -1,15 +1,17 @@
 .container {
-  width: 1024px;
+  // width: 1024px;
   margin: 0 auto;
   padding: 0 50px;
 
-  @media (max-width: $viewport--md) {
-    width: $viewport--md;
+  @media (max-width: $viewport--lg) {
     padding: 0 35px;
   }
 
-  @media (max-width: $viewport--sm) {
-    width: $viewport--sm;
+  @media (max-width: $viewport--md) {
     padding: 0 16px;
+  }
+
+  @media (max-width: $viewport--sm) {
+    background-color: rgb(218, 28, 91);
   }
 }
