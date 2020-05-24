@@ -1,0 +1,39 @@
+.form {
+  padding-top: 53px;
+}
+
+.form__title {
+  @include font-title(18px, 28px);
+  margin-bottom: 20px;
+}
+
+.form__name {
+  margin-bottom: 21px;
+}
+
+.form__phone {
+  margin-bottom: 20px;
+}
+
+.form__input {
+  @include font-main(15px, 24px, $cod-gray-50);
+  width: 288px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 26px;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid $ghost;
+}
+
+// .form__button {
+//   @include button-reset;
+//   @include font-title(15px, 21px);
+//   display: block;
+//   padding-top: 15px;
+//   padding-right: 33px;
+//   padding-bottom: 16px;
+//   padding-left: 32px;
+//   background-color: $bright-turquoise;
+//   border-radius: 6px;
+// }

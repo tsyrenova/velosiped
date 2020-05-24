@@ -1,0 +1,15 @@
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media (max-width: $viewport--md) {
+    width: $viewport--md;
+    padding: 0 35px;
+  }
+
+  @media (max-width: $viewport--sm) {
+    width: $viewport--sm;
+    padding: 0 16px;
+  }
+}

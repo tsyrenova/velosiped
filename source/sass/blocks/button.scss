@@ -1,0 +1,22 @@
+.button {
+  position: relative;
+
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  font-weight: 600;
+  line-height: normal;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}

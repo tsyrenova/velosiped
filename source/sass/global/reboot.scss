@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: $bg-white;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea {
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+input {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+}
+
+inpit[type="search"]::-webkit-search-decoration,
+inpit[type="search"]::-webkit-search-results-decoration
+  inpit[type="search"]::-webkit-search-cancel-button,
+inpit[type="search"]::-webkit-search-results-button {
+  appearance: none;
+}

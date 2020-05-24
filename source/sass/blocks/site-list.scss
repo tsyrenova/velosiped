@@ -1,0 +1,7 @@
+.site-list {
+  @include list-reset;
+}
+
+.site-item {
+  @include font-main(20px, 28px, $abbey);
+}
