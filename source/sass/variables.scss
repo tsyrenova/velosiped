@@ -1,3 +1,4 @@
+//Basic
 $white: #ffffff;
 $black: #000000;
 $abbey: #48494d;
@@ -6,20 +7,26 @@ $cod-gray: #1c1c1c;
 $mine-shaft: #1f1f1f;
 $ghost: #c9ccd4;
 
-//with opacity
+//With opacity
 $color-opacity--white-1: rgba($white, 0.7);
 $color-opacity--white-2: rgba($white, 0.8);
+$color-opacity--white-3: rgba($white, 0.2);
 $color-opacity--black-1: rgba($black, 0.5);
 $color-opacity--cod-gray-1: rgba($cod-gray, 0.5);
+$color-opacity--bright-turquoise-1: rgba($bright-turquoise, 0.8);
 
+//Fonts
 $font: "OpenSans", "Arial", sans-serif;
 $font-color-title: $mine-shaft;
 
+//Viewport
 $viewport--sm: 320px;
 $viewport--md: 767px;
 $viewport--lg: 1023px;
 
+//Retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
+//Background
 $bg-white: #ffffff;

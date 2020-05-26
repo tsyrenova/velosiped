@@ -1,9 +1,25 @@
 .wrapper {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../img/bike-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: top;
   background-color: $black;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bike-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: $viewport--lg) {
+  .wrapper {
+    background-image: url("../img/bike-tablet@1x.jpg");
+    background-size: contain;
+    background-color: $white;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bike-tablet@2x.jpg");
+    }
+  }
 }

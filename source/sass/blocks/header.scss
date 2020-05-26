@@ -1,12 +1,36 @@
+.header__logo {
+  display: none;
+}
+
 .header__nav {
   padding-top: 21px;
 }
-.header__wrapper {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+
+.header__nav-wrapper {
+  padding: 0 146px;
 }
 
-.header__wrapper-logo {
-  position: absolute;
+@media (max-width: $viewport--lg) {
+  .header__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    display: block;
+    width: 68px;
+    height: 20px;
+    margin-left: -14px;
+    padding-top: 25px;
+  }
+
+  .header__nav {
+    position: absolute;
+    display: block;
+    width: calc(100% + 70px);
+    left: -35px;
+    height: 100vh;
+    background-color: #fff;
+  }
 }
