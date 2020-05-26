@@ -40,13 +40,13 @@ gulp.task("server", function () {
     ui: false,
   });
 
-  gulp.watch(
-    "source/sass/**/*.{scss,sass}",
-    setTimeout(function () {
-      gulp.series("css");
-    }, 500)
-  );
-  // gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  // gulp.watch(
+  //   "source/sass/**/*.{scss,sass}",
+  //   setTimeout(function () {
+  //     gulp.series("css");
+  //   }, 500)
+  // );
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/js/*.js", gulp.series("jsmin", "html", "refresh"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));

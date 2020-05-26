@@ -23,3 +23,26 @@
     }
   }
 }
+
+@media (max-width: $viewport--lg) {
+  .site-list {
+    flex-direction: column;
+    width: calc(100% + 70px);
+    padding-top: 100px;
+    left: -35px;
+  }
+
+  .site-list__item {
+    background-color: $wild-sand;
+    margin-bottom: 30px;
+
+    &-link {
+      @include font-main(20px, 28px, $abbey);
+      display: block;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      padding-left: 35px;
+      text-align: left;
+    }
+  }
+}
