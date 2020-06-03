@@ -3,25 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Интернет-магазин велосипедов">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <!-- <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanssemibold.woff2" as="font" crossorigin="anonymous"> -->
   <link href="css/style.min.css" rel="stylesheet">
+
   <title>HTML Academy: Велосипед</title>
 </head>
 
 <body>
-  <!-- <div style="display: none;">
-    <include src="build/img/sprite_auto.svg"></include>
-  </div> -->
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="clip0"><path transform="rotate(-90 9 18)" fill="#fff" d="M9 18h12v7.4H9z"></path></clipPath></defs><symbol id="icon-arrow-down"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 7.4l4.6 4.6L9 16.6l1.4 1.4 6-6-6-6L9 7.4z" fill="#2C2E3F" fill-opacity=".5"></path></g></symbol><symbol id="icon-arrow">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4L4.6 6 0 10.6 1.4 12l6-6-6-6L0 1.4z" fill-opacity=".5"></path>
+</symbol><symbol id="icon-ellipse-big"><circle cx="63.5" cy="63.5" r="54.5" stroke="#0AD9C6" stroke-width="18"></circle></symbol><symbol id="icon-ellipse-small"><circle cx="34" cy="34" r="27.5" stroke="#0AD9C6" stroke-width="13"></circle></symbol><symbol id="icon-email"><path d="M24.227.118H1.773C.768.118 0 .882 0 1.882v16.471c0 1 .768 1.765 1.773 1.765h22.454c1.005 0 1.773-.765 1.773-1.765V1.883c0-1-.768-1.765-1.773-1.765zm0 17L19.56 12.47a.86.86 0 00-1.24 0 .85.85 0 000 1.235l4.667 4.647H3.014l4.668-4.647a.85.85 0 000-1.235.86.86 0 00-1.241 0l-4.668 4.647V5.824l10.636 8a.956.956 0 00.532.176.956.956 0 00.532-.176l10.754-8v11.294zm0-15.236v1.706l-11.286 8.353L1.773 3.588V1.882h22.454z" fill="#0AD9C6"></path></symbol><symbol id="icon-menu-close" viewBox="0 0 24 25">
+  <path d="M1 23.7213L23 1M23 23.7213L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol><symbol id="icon-menu-open">
+  <path fill="#231F20" d="M0 0h19.958v2H0zm0 6h19.958v2H0zm0 6h19.958v2H0z"></path>
+</symbol><symbol id="icon-phone"><path d="M3.456 6.742c-.084-1.198.181-2.378.885-3.327.61-.861 1.404-1.331 2.361-1.606.807-.239 1.335.054 1.568.95.332 1.34.806 2.681.978 4.092.055.622-.347 1.5-.782 1.952-1.09 1.074-.864 1.855-.036 3.479.257.524.664 1.43 1.458 2.628.828 1.207 1.266 1.855 2.329 1.305 1.18-.594 2.041-.212 2.932.747.604.693 1.268 1.288 1.872 1.98.873 1.03.834 1.74.151 2.467-1.229 1.34-3.258 1.782-4.768.885-.834-.488-1.664-1.128-2.325-1.873-2.914-3.32-5.016-7.182-6.282-11.54a10.989 10.989 0 01-.34-2.139z" stroke="#0AD9C6" stroke-width="2" stroke-miterlimit="10"></path></symbol><symbol id="icon-play"><path fill-rule="evenodd" clip-rule="evenodd" d="M45.179 90.358c24.951 0 45.179-20.228 45.179-45.18C90.358 20.229 70.13 0 45.178 0 20.229 0 0 20.227 0 45.179 0 70.13 20.227 90.358 45.179 90.358z" fill="#0AD9C6"></path></symbol><symbol id="icon-rectangle-black"><path fill="#131314" d="M0 0h37v37H0z"></path></symbol><symbol id="icon-rectangle"><path stroke="#0AD9C6" stroke-width="8" d="M4 4h39v39H4z"></path></symbol></svg>
+  </div>
   <!-- Шапка сайта -->
   <div class="wrapper">
-    <header class="header container">
-      <div class="header__wrapper">
-        <div class="header__logo">
-          <a class="header__logo-link" href="#">
-            <img class="header__logo-image" src="../img/logo.svg" width="68" height="20" alt="Логотип Велосипед">
-          </a>
-        </div>
+    <header class="header">
+      <div class="header__wrapper header-container">
         <button class="button button__header button__header--open hidden" type="button">
           <span class="visual-hidden">Открыть меню</span>
         </button>
@@ -29,51 +36,67 @@
           <span class="visual-hidden">Закрыть меню</span>
         </button>
         <nav class="header__nav">
-          <div class="header__nav-wrapper">
-            <ul class="header__nav-list site-list">
-              <li class="header__nav-item site-list__item">
-                <a class="site-list__item-link">О нас</a>
-              </li>
-              <li class="header__nav-item site-list__item">
-                <a class="site-list__item-link">Виды велосипедов</a>
-              </li>
-              <li class="header__nav-item site-list__item">
-                <a class="site-list__item-link">Видео про велосипеды</a>
-              </li>
-              <li class="header__nav-item site-list__item">
-                <a class="site-list__item-link">Контакты</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link">
+                <span>О нас</span>
+                <svg class="header__nav-icon" width="8" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link">
+                <span>Виды велосипедов</span>
+                <svg class="header__nav-icon" width="8" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link">
+                <span>Видео про велосипеды</span>
+                <svg class="header__nav-icon" width="8" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link">
+                <span>Контакты</span>
+                <svg class="header__nav-icon" width="8" height="12">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
-    <section class="intro container">
-      <div class="intro__wrapper">
-        <div class="intro__description">
-          <div class="intro__logo">
-            <a class="intro__logo-link" href="#">
-              <img class="intro__logo-image" src="../img/logo.svg" width="68" height="20" alt="Логотип Велосипед">
-            </a>
-          </div>
-          <h2 class="intro__description-title">Мы продаем велосипеды</h2>
-          <p class="intro__description-text">
-            Наш магазин отбирает только самые лучшие велосипеды для продажи
-          </p>
+    <section class="intro header-container">
+      <div class="intro__description">
+        <div class="intro__logo">
+          <a class="intro__logo-link">
+            <img src="../img/logo.svg" width="68" height="20" alt="Логотип Велосипед">
+          </a>
         </div>
-        <form class="intro__form">
-          <p class="intro__form-title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <div class="intro__form-name">
-            <input class="intro__form-input" type="text" placeholder="Введите Ваше Имя">
-          </div>
-          <div class="intro__form-phone">
-            <input class="intro__form-input" type="text" placeholder="Введите Ваш номер телефона">
-          </div>
-          <button class="button button__form" type="submit" value="Кнопка для подбора велосипеда мечты">Подобрать
-            велосипед
-            мечты</button>
-        </form>
+        <h2>Мы продаем велосипеды</h2>
+        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
+      <form class="intro__form">
+        <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <label>
+          <span class="visual-hidden">Введите Ваше Имя</span>
+          <input id="name" type="text" placeholder="Введите Ваше Имя">
+        </label>
+        <label>
+          <span class="visual-hidden">Введите Ваш номер телефона</span>
+          <input id="phone" type="tel" pattern="^[0-9]{10}$" placeholder="Введите Ваш номер телефона">
+        </label>
+        <button class="button button__form" type="submit" value="Кнопка для подбора велосипеда мечты">Подобрать
+          велосипед
+          мечты</button>
+      </form>
     </section>
   </div>
   <!-- Основное содержимое страницы -->

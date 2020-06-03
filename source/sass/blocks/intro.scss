@@ -1,103 +1,195 @@
-.intro__wrapper {
+.intro {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
-  padding-top: 260px;
-  padding-bottom: 240px;
-  padding-left: 143px;
-  padding-right: 143px;
-}
+  align-items: center;
+  padding-top: 50px;
 
-.intro__description {
-  width: 390px;
+  &__description {
+    position: relative;
+    width: 381px;
 
-  &-title {
-    @include font-title(46px, 64px, $white);
-    text-align: left;
-    font-weight: 700;
-    padding-bottom: 24px;
-    padding-top: 51px;
-  }
-
-  &-text {
-    @include font-title(20px, 32px, $color-opacity--white-2);
-    text-align: left;
-    font-weight: 300;
-  }
-}
-
-.intro__logo {
-  width: 68px;
-  height: 20px;
-}
-
-.intro__form {
-  &-title {
-    @include font-title(17px, 28px, $white);
-    width: 327px;
-    padding-bottom: 20px;
-  }
-
-  &-input {
-    @include font-main(15px, 24px, $black);
-    width: 327px;
-    margin-bottom: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 29px;
-    text-align: left;
-    border: 1px solid $ghost;
-    border-radius: 4px;
-
-    &:hover,
-    &:focus {
-      border: 1px solid $bright-turquoise;
+    h2 {
+      @include font-title(46px, 64px, $white);
+      text-align: left;
+      font-weight: 700;
+      padding-bottom: 24px;
+      padding-top: 51px;
     }
 
-    &::placeholder {
-      color: $color-opacity--cod-gray-1;
+    p {
+      @include font-title(20px, 32px, $color-opacity--white-2);
+      text-align: left;
+      font-weight: 300;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__logo-link {
+    display: block;
+    text-align: left;
+
+    img {
+      width: 68px;
+      height: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    transition: color $transition;
+
+    p {
+      @include font-title(17px, 28px, $white);
+      width: 327px;
+      padding-bottom: 20px;
     }
 
-    &:-ms-input-placeholder {
-      color: $color-opacity--cod-gray-1;
+    input {
+      @include font-main(15px, 24px, $black);
+      width: 327px;
+      margin-bottom: 20px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 29px;
+      text-align: left;
+      border: 1px solid $ghost;
+      border-radius: 4px;
+      transition: border $transition, box-shadow $transition,
+        opacity $transition;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $bright-turquoise;
+        box-shadow: 0 0 2px 2px $bright-turquoise;
+      }
+
+      &:active {
+        border: 1px solid $color-opacity--bright-turquoise-1;
+        box-shadow: 0 0 2px 2px $color-opacity--bright-turquoise-1;
+      }
+
+      &::placeholder {
+        color: $color-opacity--cod-gray-1;
+      }
+
+      &:-ms-input-placeholder {
+        color: $color-opacity--cod-gray-1;
+      }
     }
   }
 }
 
 @media (max-width: $viewport--lg) {
-  .intro__wrapper {
+  .intro {
+    display: flex;
     flex-direction: column;
-    padding-top: 86px;
-    padding-left: 0;
-    padding-right: 0;
-  }
+    padding-top: 0;
 
-  .intro__logo {
-    display: none;
-  }
-
-  .intro__description {
-    width: 525px;
-    margin: 0 auto;
-    margin-bottom: 150px;
-
-    &-title {
-      font-size: 30px;
-      line-height: 42px;
-      text-align: center;
-    }
-
-    &-text {
-      padding: 0 50px;
-      font-size: 18px;
-      text-align: center;
-    }
-  }
-
-  .intro__form {
-    &-title {
+    &__description {
+      position: relative;
+      width: 100%;
       margin: 0 auto;
-      font-size: 18px;
-      color: $black;
+      padding-top: 130px;
+      padding-bottom: 80px;
+
+      background-image: url("../img/bike-tablet@1x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $black;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bike-tablet@2x.jpg");
+      }
+
+      h2 {
+        font-size: 30px;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+      }
+
+      p {
+        width: 435px;
+        margin: 0 auto;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    &__logo {
+      left: 25px;
+      top: 21px;
+    }
+
+    &__form {
+      padding-top: 70px;
+      padding-bottom: 35px;
+
+      p {
+        width: 324px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: $black;
+      }
+
+      label {
+        width: 321px;
+      }
+
+      input {
+        width: 321px;
+        padding-left: 21px;
+        padding-right: 57px;
+      }
+    }
+  }
+}
+
+@media (max-width: $viewport--md) {
+  .intro {
+    &__description {
+      padding-top: 120px;
+      padding-bottom: 70px;
+      background-image: url("../img/bike-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bike-mobile@2x.jpg");
+      }
+
+      h2 {
+        width: 288px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 288px;
+      }
+    }
+
+    &__form {
+      p {
+        width: 288px;
+      }
+
+      label {
+        width: 288px;
+      }
+
+      input {
+        width: 288px;
+        padding-left: 26px;
+        padding-right: 19px;
+      }
     }
   }
 }

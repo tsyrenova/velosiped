@@ -27,6 +27,7 @@
     padding-right: 43px;
     border-radius: 6px;
     background-color: $bright-turquoise;
+    transition: opacity $transition, color $transition;
 
     &:hover,
     &:focus {
@@ -50,12 +51,15 @@
       display: block;
       width: 50px;
       height: 50px;
-      margin-right: -35px;
-
       outline: 1px solid red;
 
       &--open {
+        position: absolute;
+        top: 0;
+        right: 0;
         background-color: $bright-turquoise;
+        z-index: 1;
+
         &::before {
           @include pseudo;
           top: 10px;
@@ -67,14 +71,25 @@
           background-size: 20px 14px;
           background-position: center;
         }
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
       }
 
       &--close {
+        position: absolute;
+        top: 0;
+        right: 0;
         background-color: transparent;
+
         &::before {
           @include pseudo;
-          // top: 10px;
-          // left: 10px;
           width: 22px;
           height: 23px;
           background-color: transparent;
@@ -92,14 +107,19 @@
       &--hide {
         display: none;
       }
-
-      &--show {
-        display: block;
-      }
     }
 
     &__form {
+      width: 321px;
       line-height: 21px;
+    }
+  }
+}
+
+@media (max-width: $viewport--md) {
+  .button {
+    &__form {
+      width: 288px;
     }
   }
 }

@@ -123,6 +123,6 @@ gulp.task("jsmin", function () {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "css", "jsmin", "sprite", "html")
+  gulp.series("clean", "copy", "css", "jsmin", "images", "sprite", "html")
 );
 gulp.task("start", gulp.series("build", "server"));

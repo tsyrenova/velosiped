@@ -6,6 +6,8 @@
   background-size: cover;
   background-position: top;
   background-color: $black;
+  display: flex;
+  flex-direction: column;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bike-desktop@2x.jpg");
@@ -14,12 +16,8 @@
 
 @media (max-width: $viewport--lg) {
   .wrapper {
-    background-image: url("../img/bike-tablet@1x.jpg");
-    background-size: contain;
+    min-height: auto;
+    background-image: none;
     background-color: $white;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bike-tablet@2x.jpg");
-    }
   }
 }

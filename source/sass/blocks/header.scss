@@ -1,41 +1,108 @@
-.header__logo {
-  display: none;
-}
+.header {
+  &__nav {
+    padding-top: 21px;
+  }
 
-.header__nav {
-  padding-top: 21px;
-}
+  &__nav-list {
+    @include list-reset;
+    position: relative;
+    display: flex;
+    padding: 0 27px;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-opacity--white-3;
+  }
 
-.header__nav-wrapper {
-  padding: 0 146px;
+  &__nav-item {
+    margin-bottom: 9px;
+  }
+
+  &__nav-link {
+    @include font-main(16px, 32px, $color-opacity--white-1);
+    transition: color $transition;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-opacity--white-3;
+    }
+
+    &:active {
+      color: $bright-turquoise;
+    }
+  }
+
+  &__nav-icon {
+    display: none;
+  }
 }
 
 @media (max-width: $viewport--lg) {
-  .header__wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header__logo {
-    display: block;
-    width: 68px;
-    height: 20px;
-    margin-left: -14px;
-    padding-top: 25px;
-  }
-
-  .header__nav-wrapper {
-    padding: 0;
-  }
-
-  .header__nav {
+  .header {
     position: absolute;
-    display: block;
-    width: calc(100% + 70px);
-    left: -35px;
-    height: 100vh;
-    background-color: #fff;
-    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    &__nav {
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility $transition opacity $transition;
+      width: 100%;
+      height: 100vh;
+      background-color: $white;
+      z-index: 1;
+    }
+
+    &__nav-list {
+      flex-direction: column;
+      width: calc(100% + 70px);
+      padding-top: 100px;
+      left: -35px;
+    }
+
+    &__nav-item {
+      background-color: $wild-sand;
+      margin-bottom: 30px;
+      padding-right: 25px;
+    }
+
+    &__nav-link {
+      @include font-main(20px, 28px, $abbey);
+      position: relative;
+      display: flex;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      padding-left: 35px;
+      text-align: left;
+    }
+
+    &__nav-icon {
+      display: block;
+      margin-top: 9px;
+      margin-left: auto;
+      width: 8px;
+      height: 12px;
+    }
+  }
+
+  .header__nav-link:hover,
+  .header__nav-link:focus {
+    color: $color-opacity--abbey-1;
+
+    & .header__nav-icon {
+      fill: $color-opacity--abbey-1;
+    }
+  }
+
+  .header__nav-link:active {
+    color: $bright-turquoise;
+
+    & .header__nav-icon {
+      fill: $bright-turquoise;
+    }
   }
 }
