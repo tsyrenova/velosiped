@@ -96,7 +96,7 @@
       position: relative;
       width: 100%;
       margin: 0 auto;
-      padding-top: 130px;
+      padding-top: 81px;
       padding-bottom: 80px;
 
       background-image: url("../img/bike-tablet@1x.jpg");
@@ -157,7 +157,7 @@
 @media (max-width: $viewport--md) {
   .intro {
     &__description {
-      padding-top: 120px;
+      padding-top: 69px;
       padding-bottom: 70px;
       background-image: url("../img/bike-mobile@1x.jpg");
 
@@ -187,6 +187,7 @@
 
       input {
         width: 288px;
+        padding-top: 10px;
         padding-left: 26px;
         padding-right: 19px;
       }

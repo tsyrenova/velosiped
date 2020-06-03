@@ -34,3 +34,20 @@
     width: 320px;
   }
 }
+
+.about-container {
+  width: 100%;
+  max-width: 1266px;
+  margin: 0 auto;
+  padding: 0 39px;
+
+  @media (max-width: $viewport--lg) {
+    max-width: 980px;
+    padding: 0 50px;
+  }
+
+  @media (max-width: $viewport--md) {
+    max-width: 567px;
+    padding: 0 15px;
+  }
+}
