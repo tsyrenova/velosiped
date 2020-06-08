@@ -1,6 +1,5 @@
 "use strict";
 
-const menu = document.querySelector(".button__toggle");
 const headerNav = document.querySelector(".header__nav");
 const buttonToggleOpen = document.querySelector(".button__header--open");
 const buttonToggleClose = document.querySelector(".button__header--close");
@@ -14,9 +13,18 @@ function toggleMenu() {
   headerNav.classList.toggle("hidden");
 }
 
+function onMenuItemPress() {
+  toggleMenu();
+  document.body.classList.remove("modal");
+}
+
 function onButtonOpenClick() {
   toggleMenu();
   document.addEventListener("keydown", onEscKeydown);
+  document.body.classList.add("modal");
+  const menu = document.querySelector(".header__nav-list");
+  console.log(menu);
+  menu.addEventListener("click", onMenuItemPress);
 }
 
 function onButtonCloseClick() {

@@ -1,0 +1,191 @@
+.catalog {
+  background-color: $athens-gray;
+
+  h2 {
+    @include font-title(30px, 30px, $mine-shaft);
+    padding-top: 153px;
+    padding-bottom: 47px;
+    letter-spacing: -0.005em;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 36px;
+    padding-bottom: 147px;
+  }
+
+  &__item {
+    position: relative;
+    width: 342px;
+    margin-bottom: 50px;
+
+    &--road {
+      padding-top: 10px;
+      margin-right: 50px;
+    }
+
+    &--mountain {
+      padding-top: 39px;
+      margin-right: 50px;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    padding-bottom: 14px;
+    z-index: 1;
+
+    &--road {
+      &::before {
+        @include pseudo;
+        top: 30%;
+        left: -59px;
+        width: 180px;
+        height: 180px;
+        background-image: url("../img/icon-ellipse-big.svg");
+        background-repeat: no-repeat;
+        background-size: 180px 180px;
+        z-index: -1;
+      }
+    }
+
+    &--mountain {
+      &::before {
+        @include pseudo;
+        top: -13px;
+        left: -14px;
+        width: 37px;
+        height: 37px;
+        background-image: url("../img/icon-rectangle-black.svg");
+        background-repeat: no-repeat;
+        background-size: 37px 37px;
+      }
+
+      &::after {
+        @include pseudo;
+        bottom: -2px;
+        right: -23px;
+        width: 47px;
+        height: 47px;
+        background-image: url("../img/icon-rectangle.svg");
+        background-repeat: no-repeat;
+        background-size: 47px 47px;
+      }
+    }
+
+    &--children {
+      &::before {
+        @include pseudo;
+        top: -32px;
+        right: -36px;
+        width: 95px;
+        height: 95px;
+        background-image: url("../img/icon-ellipse-small.svg");
+        background-repeat: no-repeat;
+        background-size: 95px 95px;
+      }
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    p {
+      @include font-title(22px, 34px);
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+@media (max-width: $viewport--lg) {
+  .catalog {
+    &__list {
+      flex-wrap: wrap;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__item {
+      width: 270px;
+
+      &--mountain {
+        margin-right: 0;
+        padding-top: 10px;
+      }
+
+      &--children {
+        margin: 0 auto;
+      }
+    }
+
+    h2 {
+      padding-top: 52px;
+      padding-bottom: 18px;
+      font-size: 24px;
+      line-height: 41px;
+    }
+
+    &__image-wrap {
+      width: 270px;
+      height: 300px;
+      margin-bottom: 20px;
+
+      &--road::before {
+        top: 201px;
+        left: -37px;
+        width: 127px;
+        height: 127px;
+        background-size: 127px 127px;
+      }
+
+      &--mountain::before,
+      &--mountain::after {
+        display: none;
+      }
+
+      &--children::before {
+        top: -20px;
+        right: -25px;
+        width: 68px;
+        height: 68px;
+        background-size: 68px 68px;
+      }
+    }
+  }
+}
+
+@media (max-width: $viewport--md) {
+  .catalog {
+    &__item {
+      margin: 0 auto;
+      margin-bottom: 32px;
+
+      &--children {
+        padding-top: 10px;
+      }
+    }
+
+    &__image-wrap {
+      padding-bottom: 14px;
+
+      img {
+        border-radius: 8px;
+      }
+
+      &--road::before {
+        top: 201px;
+        left: -24px;
+      }
+
+      &--children::before {
+        right: -15px;
+      }
+    }
+  }
+}

@@ -2,8 +2,8 @@
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  padding-top: 40px;
   align-items: center;
-  padding-top: 50px;
 
   &__description {
     position: relative;
@@ -40,7 +40,7 @@
     }
   }
 
-  &__form {
+  form {
     display: flex;
     flex-direction: column;
     transition: color $transition;
@@ -48,6 +48,7 @@
     p {
       @include font-title(17px, 28px, $white);
       width: 327px;
+      padding-top: 6px;
       padding-bottom: 20px;
     }
 
@@ -55,14 +56,13 @@
       @include font-main(15px, 24px, $black);
       width: 327px;
       margin-bottom: 20px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 11px;
+      padding-bottom: 11px;
       padding-left: 29px;
       text-align: left;
       border: 1px solid $ghost;
       border-radius: 4px;
-      transition: border $transition, box-shadow $transition,
-        opacity $transition;
+      transition: border $transition, box-shadow $transition, opacity $transition;
 
       &:hover,
       &:focus {
@@ -126,17 +126,18 @@
     }
 
     &__logo {
-      left: 25px;
-      top: 21px;
+      left: 22px;
+      top: 22px;
     }
 
-    &__form {
-      padding-top: 70px;
-      padding-bottom: 35px;
+    form {
+      padding-top: 64px;
+      padding-bottom: 39px;
 
       p {
         width: 324px;
         margin: 0 auto;
+        padding-bottom: 30px;
         font-size: 18px;
         color: $black;
       }
@@ -147,6 +148,8 @@
 
       input {
         width: 321px;
+        padding-top: 12px;
+        padding-bottom: 11px;
         padding-left: 21px;
         padding-right: 57px;
       }
@@ -176,9 +179,12 @@
       }
     }
 
-    &__form {
+    form {
+      padding-bottom: 36px;
+
       p {
         width: 288px;
+        padding-bottom: 22px;
       }
 
       label {

@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 1023px;
   margin: 0 auto;
-  padding: 0 57px;
+  padding: 0 71px;
 
   @media (max-width: $viewport--lg) {
     padding: 0;
@@ -47,7 +47,24 @@
   }
 
   @media (max-width: $viewport--md) {
-    max-width: 567px;
+    max-width: 320px;
     padding: 0 15px;
+  }
+}
+
+.catalog-container {
+  width: 100%;
+  max-width: 1322px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media (max-width: $viewport--lg) {
+    max-width: 690px;
+    padding: 0 50px;
+  }
+
+  @media (max-width: $viewport--md) {
+    max-width: 320px;
+    padding: 0 25px;
   }
 }

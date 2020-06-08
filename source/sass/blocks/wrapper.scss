@@ -1,13 +1,14 @@
 .wrapper {
   position: relative;
-  min-height: 100vh;
+  min-height: 825px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
   background-image: url("../img/bike-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   background-color: $black;
-  display: flex;
-  flex-direction: column;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bike-desktop@2x.jpg");
