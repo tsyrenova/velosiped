@@ -68,3 +68,20 @@
     padding: 0 25px;
   }
 }
+
+.video-bike-container {
+  width: 100%;
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: 0 47px;
+
+  @media (max-width: $viewport--lg) {
+    max-width: 668px;
+    padding: 0 50px;
+  }
+
+  @media (max-width: $viewport--md) {
+    max-width: 320px;
+    padding: 0 16px;
+  }
+}

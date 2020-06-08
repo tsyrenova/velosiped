@@ -183,6 +183,20 @@ a {
       max-width: 320px;
       padding: 0 25px; } }
 
+.video-bike-container {
+  width: 100%;
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: 0 47px; }
+  @media (max-width: 1023px) {
+    .video-bike-container {
+      max-width: 668px;
+      padding: 0 50px; } }
+  @media (max-width: 767px) {
+    .video-bike-container {
+      max-width: 320px;
+      padding: 0 16px; } }
+
 .visual-hidden {
   position: absolute;
   width: 1px;
@@ -450,8 +464,8 @@ a {
       position: relative;
       width: 100%;
       margin: 0 auto;
-      padding-top: 81px;
-      padding-bottom: 80px;
+      padding-top: 84px;
+      padding-bottom: 78px;
       background-image: url("../img/bike-tablet@1x.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -697,7 +711,7 @@ a {
   .about__list {
     padding-left: 45px;
     padding-right: 42px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     letter-spacing: -0.005em; }
   .about__item {
     margin: 0 auto;
@@ -750,11 +764,9 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding-left: 60px;
     padding-right: 36px;
-    padding-bottom: 147px; }
+    padding-bottom: 98px; }
   .catalog__item {
     position: relative;
     width: 342px;
@@ -833,7 +845,8 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-bottom: 70px; }
   .catalog__item {
     width: 270px; }
     .catalog__item--mountain {
@@ -866,6 +879,8 @@ a {
       background-size: 68px 68px; } }
 
 @media (max-width: 767px) {
+  .catalog__list {
+    padding-bottom: 23px; }
   .catalog__item {
     margin: 0 auto;
     margin-bottom: 32px; }
@@ -883,3 +898,78 @@ a {
 
 .modal {
   overflow: hidden; }
+
+.video-bike {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(82%, #131314), color-stop(18%, #ffffff));
+  background: linear-gradient(to bottom, #131314 82%, #ffffff 18%); }
+  .video-bike__wrapper {
+    padding-bottom: 50px; }
+    .video-bike__wrapper h2 {
+      margin-left: -7px;
+      padding-top: 120px;
+      padding-bottom: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.08px; }
+    .video-bike__wrapper p {
+      width: 340px;
+      margin: 0 auto;
+      padding-bottom: 56px;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: -0.08px; }
+  .video-bike__image-wrapper {
+    position: relative; }
+    .video-bike__image-wrapper::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 229px;
+      left: 432px;
+      width: 65px;
+      height: 65px;
+      background-image: url("../img/icon-play.svg");
+      background-repeat: no-repeat;
+      background-size: 65px 65px; }
+
+@media (max-width: 1023px) {
+  .video-bike {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #131314), color-stop(25%, #ffffff));
+    background: linear-gradient(to bottom, #131314 75%, #ffffff 25%); }
+    .video-bike__wrapper h2 {
+      padding-top: 70px;
+      font-size: 24px; }
+    .video-bike__wrapper p {
+      width: 429px;
+      padding-bottom: 40px; }
+    .video-bike__image-wrapper::before {
+      top: 96px;
+      left: 239px;
+      width: 90px;
+      height: 90px;
+      background-size: 90px 90px; }
+    .video-bike__image-wrapper img {
+      width: 503px;
+      height: 282px; } }
+
+@media (max-width: 767px) {
+  .video-bike {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(79%, #131314), color-stop(21%, #ffffff));
+    background: linear-gradient(to bottom, #131314 79%, #ffffff 21%); }
+    .video-bike__wrapper h2 {
+      margin-left: 0;
+      padding-top: 78px;
+      padding-bottom: 15px; }
+    .video-bike__wrapper p {
+      width: 288px;
+      padding-bottom: 53px; }
+    .video-bike__image-wrapper::before {
+      top: 48px;
+      left: 112px;
+      width: 65px;
+      height: 65px;
+      background-size: 65px 65px; }
+    .video-bike__image-wrapper img {
+      width: 288px;
+      height: 162px; } }
