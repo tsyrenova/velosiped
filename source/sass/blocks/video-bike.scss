@@ -1,6 +1,5 @@
 .video-bike {
   background: linear-gradient(to bottom, $bg-woodsmoke 82%, $bg-white 18%);
-  // background-color: $bg-woodsmoke;
 
   &__wrapper {
     padding-bottom: 50px;
@@ -28,15 +27,29 @@
   &__image-wrapper {
     position: relative;
 
-    &::before {
-      @include pseudo;
-      top: 229px;
-      left: 432px;
-      width: 65px;
-      height: 65px;
-      background-image: url("../img/icon-play.svg");
-      background-repeat: no-repeat;
-      background-size: 65px 65px;
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    display: block;
+    top: 229px;
+    left: 432px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
     }
   }
 }
@@ -58,12 +71,16 @@
     }
 
     &__image-wrapper {
-      &::before {
-        top: 96px;
-        left: 239px;
-        width: 90px;
-        height: 90px;
-        background-size: 90px 90px;
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
       }
 
       img {
@@ -71,38 +88,62 @@
         height: 282px;
       }
     }
-  }
-}
 
-@media (max-width: $viewport--md) {
-  .video-bike {
-    background: linear-gradient(to bottom, $bg-woodsmoke 79%, $bg-white 21%);
+    &__play {
+      top: 96px;
+      left: 239px;
 
-    &__wrapper {
-      h2 {
-        margin-left: 0;
-        padding-top: 78px;
-        padding-bottom: 15px;
-      }
-
-      p {
-        width: 288px;
-        padding-bottom: 53px;
+      &-icon {
+        width: 90px;
+        height: 90px;
       }
     }
+  }
 
-    &__image-wrapper {
-      &::before {
-        top: 48px;
-        left: 112px;
-        width: 65px;
-        height: 65px;
-        background-size: 65px 65px;
+  @media (max-width: $viewport--md) {
+    .video-bike {
+      background: linear-gradient(to bottom, $bg-woodsmoke 79%, $bg-white 21%);
+
+      &__wrapper {
+        h2 {
+          margin-left: 0;
+          padding-top: 78px;
+          padding-bottom: 15px;
+        }
+
+        p {
+          width: 288px;
+          padding-bottom: 53px;
+        }
       }
 
-      img {
-        width: 288px;
-        height: 162px;
+      &__image-wrapper {
+        &--desctop {
+          display: none;
+        }
+
+        &--tablet {
+          display: none;
+        }
+
+        &--mobile {
+          display: block;
+        }
+
+        img {
+          width: 288px;
+          height: 162px;
+        }
+      }
+
+      &__play {
+        top: 48px;
+        left: 112px;
+
+        &-icon {
+          width: 65px;
+          height: 65px;
+        }
       }
     }
   }

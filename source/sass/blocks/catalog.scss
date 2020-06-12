@@ -38,6 +38,10 @@
     padding-bottom: 14px;
     z-index: 1;
 
+    &--tablet {
+      display: none;
+    }
+
     &--road {
       &::before {
         @include pseudo;
@@ -135,6 +139,14 @@
       width: 270px;
       height: 300px;
       margin-bottom: 20px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
 
       &--road::before {
         top: 201px;

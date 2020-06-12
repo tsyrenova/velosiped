@@ -96,7 +96,7 @@
           <span class="visual-hidden">Введите Ваш номер телефона</span>
           <input id="phone" type="tel" pattern="^[0-9]{10}$" placeholder="Введите Ваш номер телефона">
         </label>
-        <button class="button button__form" aria-label="submit" value="Кнопка для подбора велосипеда мечты">Подобрать
+        <button class="button button__form" type="submit" aria-label="Кнопка для подбора велосипеда мечты">Подобрать
           велосипед
           мечты</button>
       </form>
@@ -105,7 +105,7 @@
   <!-- Основное содержимое страницы -->
   <main class="main">
     <section class="about about-container" id="about">
-      <h2 class="about__title">Несколько фактов о нас</h2>
+      <h2>Несколько фактов о нас</h2>
       <ul class="about__list">
         <li class="about__item">
           <span>01</span>
@@ -128,15 +128,17 @@
 
     <section class="catalog" id="catalog">
       <div class="catalog__wrapper catalog-container">
-        <h2 class="catalog__title">Виды велосипедов</h2>
+        <h2>Виды велосипедов</h2>
         <ul class="catalog__list">
           <li class="catalog__item catalog__item--road">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--road">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/road-bike@1x.jpg 1x, img/road-bike@2x.jpg 2x">
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="270" height="300" alt="Дорожный велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/road-bike-desktop@1x.jpg" srcset="img/road-bike-desktop@2x.jpg 2x" width="342" height="503" alt="Дорожный велосипед">
-                </picture>
+                </div>
               </div>
               <p>Дорожный велосипед</p>
             </a>
@@ -144,10 +146,12 @@
           <li class="catalog__item catalog__item--mountain">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--mountain">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/mountain-bike@1x.jpg 1x, img/mountain-bike@2x.jpg 2x">
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/mountain-bike@1x.jpg" srcset="img/mountain-bike@2x.jpg 2x" width="270" height="300" alt="Горный велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342" height="566" alt="Горный велосипед">
-                </picture>
+                </div>
               </div>
               <p>Горный велосипед</p>
             </a>
@@ -155,10 +159,12 @@
           <li class="catalog__item catalog__item--children">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--children">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/childrens-bike@1x.jpg 1x, img/childrens-bike@2x.jpg 2x">
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/childrens-bike@1x.jpg" srcset="img/childrens-bike@2x.jpg 2x" width="270" height="300" alt="Детский велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/childrens-bike-desktop@1x.jpg" srcset="img/childrens-bike-desktop@2x.jpg 2x" width="342" height="513" alt="Детский велосипед">
-                </picture>
+                </div>
               </div>
               <p>Детский велосипед</p>
             </a>
@@ -171,18 +177,40 @@
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video-bike__image-wrapper">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <source media="(max-width: 767px)" srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x">
+          <div class="video-bike__image-wrapper video-bike__image-wrapper--mobile">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="288" height="162" alt="Видео о выбре велосипеда для себя">
+          </div>
+          <div class="video-bike__image-wrapper video-bike__image-wrapper--tablet">
+            <img src="img/video-tablet@1x.jpg" srcset="img/video-tablet@2x.jpg 2x" width="503" height="282" alt="Видео о выбре велосипеда для себя">
+          </div>
+          <div class="video-bike__image-wrapper video-bike__image-wrapper--desktop">
             <img src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="929" height="522" alt="Видео о выбре велосипеда для себя">
-          </picture>
+          </div>
+          <a class="video-bike__play">
+            <span class="visual-hidden">Play</span>
+            <svg class="video-bike__play-icon" width="65" height="65">
+              <use xlink:href="#icon-play"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Подвал сайта -->
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <section class="contact">
+      <div class="contact__adresses">
+        <h2>Как нас найти?</h2>
+        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      </div>
+      <div class="contact__map"></div>
+      <div class="contact__connection">
+        <p></p>
+      </div>
+
+    </section>
+  </footer>
   <script src="js/script.min.js"></script>
 </body>
 
