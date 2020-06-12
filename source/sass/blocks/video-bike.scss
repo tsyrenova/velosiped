@@ -1,4 +1,5 @@
 .video-bike {
+  margin-bottom: 30px;
   background: linear-gradient(to bottom, $bg-woodsmoke 82%, $bg-white 18%);
 
   &__wrapper {
@@ -56,6 +57,7 @@
 
 @media (max-width: $viewport--lg) {
   .video-bike {
+    margin-bottom: 10px;
     background: linear-gradient(to bottom, $bg-woodsmoke 75%, $bg-white 25%);
 
     &__wrapper {
