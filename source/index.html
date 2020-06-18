@@ -7,11 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
-  <!-- <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/opensanssemibold.woff2" as="font" crossorigin="anonymous"> -->
   <link href="css/style.min.css" rel="stylesheet">
-
   <title>HTML Academy: Велосипед</title>
 </head>
 
@@ -32,7 +28,7 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#about">
+              <a class="header__nav-link header__nav-link--about" href="#about" data-mt-duration="20000">
                 <span>О нас</span>
                 <svg class="header__nav-icon" width="8" height="12">
                   <use xlink:href="#icon-arrow"></use>
@@ -81,11 +77,11 @@
         <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <label>
           <span class="visual-hidden">Введите Ваше Имя</span>
-          <input id="name" type="text" placeholder="Введите Ваше Имя">
+          <input id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder="Введите Ваше Имя" required>
         </label>
         <label>
           <span class="visual-hidden">Введите Ваш номер телефона</span>
-          <input id="phone" type="tel" pattern="^[0-9]{10}$" placeholder="Введите Ваш номер телефона">
+          <input id="phone" type="tel" pattern="^[0-9]{5,11}$" placeholder="Введите Ваш номер телефона" required>
         </label>
         <button class="button button__form" type="submit" aria-label="Кнопка для подбора велосипеда мечты">Подобрать
           велосипед
@@ -124,13 +120,13 @@
           <li class="catalog__item catalog__item--road">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--road">
-                <div class="catalog__image-wrap catalog__image-wrap--tablet">
-                  <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="270" height="300"
-                    alt="Дорожный велосипед">
-                </div>
                 <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/road-bike-desktop@1x.jpg" srcset="img/road-bike-desktop@2x.jpg 2x" width="342"
                     height="503" alt="Дорожный велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/road-bike@1x.jpg" srcset="img/road-bike@2x.jpg 2x" width="270" height="300"
+                    alt="Дорожный велосипед">
                 </div>
               </div>
               <p>Дорожный велосипед</p>
@@ -139,13 +135,13 @@
           <li class="catalog__item catalog__item--mountain">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--mountain">
-                <div class="catalog__image-wrap catalog__image-wrap--tablet">
-                  <img src="img/mountain-bike@1x.jpg" srcset="img/mountain-bike@2x.jpg 2x" width="270" height="300"
-                    alt="Горный велосипед">
-                </div>
                 <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/mountain-bike-desktop@1x.jpg" srcset="img/mountain-bike-desktop@2x.jpg 2x" width="342"
                     height="566" alt="Горный велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/mountain-bike@1x.jpg" srcset="img/mountain-bike@2x.jpg 2x" width="270" height="300"
+                    alt="Горный велосипед">
                 </div>
               </div>
               <p>Горный велосипед</p>
@@ -154,13 +150,13 @@
           <li class="catalog__item catalog__item--children">
             <a class="catalog__link" href="#">
               <div class="catalog__image-wrap catalog__image-wrap--children">
-                <div class="catalog__image-wrap catalog__image-wrap--tablet">
-                  <img src="img/childrens-bike@1x.jpg" srcset="img/childrens-bike@2x.jpg 2x" width="270" height="300"
-                    alt="Детский велосипед">
-                </div>
                 <div class="catalog__image-wrap catalog__image-wrap--desktop">
                   <img src="img/childrens-bike-desktop@1x.jpg" srcset="img/childrens-bike-desktop@2x.jpg 2x" width="342"
                     height="513" alt="Детский велосипед">
+                </div>
+                <div class="catalog__image-wrap catalog__image-wrap--tablet">
+                  <img src="img/childrens-bike@1x.jpg" srcset="img/childrens-bike@2x.jpg 2x" width="270" height="300"
+                    alt="Детский велосипед">
                 </div>
               </div>
               <p>Детский велосипед</p>
@@ -174,16 +170,16 @@
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video-bike__image-wrapper">
-          <div class="video-bike__image-wrapper video-bike__image-wrapper--mobile">
-            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="288" height="162"
+          <div class="video-bike__image-wrapper video-bike__image-wrapper--desktop">
+            <img src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="929" height="522"
               alt="Видео о выбре велосипеда для себя">
           </div>
           <div class="video-bike__image-wrapper video-bike__image-wrapper--tablet">
             <img src="img/video-tablet@1x.jpg" srcset="img/video-tablet@2x.jpg 2x" width="503" height="282"
               alt="Видео о выбре велосипеда для себя">
           </div>
-          <div class="video-bike__image-wrapper video-bike__image-wrapper--desktop">
-            <img src="img/video-desktop@1x.jpg" srcset="img/video-desktop@2x.jpg 2x" width="929" height="522"
+          <div class="video-bike__image-wrapper video-bike__image-wrapper--mobile">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="288" height="162"
               alt="Видео о выбре велосипеда для себя">
           </div>
           <a class="video-bike__play">
@@ -198,34 +194,35 @@
   </main>
 
   <!-- Подвал сайта -->
-  <footer class="contact contact-container" id="contact">
+  <section class="contact contact-container" id="contact">
     <div class="contact__adresses">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     </div>
     <div class="contact__map">
-      <div class="contact__map-mobile">
-        <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="250"
+      <div class="contact__map-desktop">
+        <img src="img/map-desktop@1x.jpg" srcset="img/map-desktop@2x.jpg 2x" width="957" height="530"
           alt="Карта нашего месторасположения">
       </div>
       <div class="contact__map-tablet">
         <img src="img/map-tablet@1x.jpg" srcset="img/map-tablet@2x.jpg 2x" width="698" height="545"
           alt="Карта нашего месторасположения">
       </div>
-      <div class="contact__map-desktop">
-        <img src="img/map-desktop@1x.jpg" srcset="img/map-desktop@2x.jpg 2x" width="957" height="530"
+      <div class="contact__map-mobile">
+        <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="250"
           alt="Карта нашего месторасположения">
       </div>
     </div>
     <div class="contact__wrapper">
-      <div class="contact__info contact__info--email">
+      <a class="contact__info contact__info--email">
         <p>puteshestviemechta@gmail.ru</p>
-      </div>
-      <div class="contact__info contact__info--phone">
+      </a>
+      <a class="contact__info contact__info--phone">
         <p>+7 (499) -784-684-46</p>
-      </div>
+      </a>
     </div>
-  </footer>
+  </section>
+  <script src="js/move.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 

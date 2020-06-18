@@ -12,6 +12,7 @@
     @include list-reset;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-left: 60px;
     padding-right: 36px;
     padding-bottom: 98px;
@@ -109,7 +110,6 @@
 @media (max-width: $viewport--lg) {
   .catalog {
     &__list {
-      flex-wrap: wrap;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 70px;
