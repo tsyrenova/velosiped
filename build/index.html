@@ -86,11 +86,11 @@
         <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <label>
           <span class="visual-hidden">Введите Ваше Имя</span>
-          <input id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder="Введите Ваше Имя" required="">
+          <input id="name" value="" type="text" placeholder="Введите Ваше Имя">
         </label>
         <label>
           <span class="visual-hidden">Введите Ваш номер телефона</span>
-          <input id="phone" type="tel" pattern="^[0-9]{5,11}$" placeholder="Введите Ваш номер телефона" required="">
+          <input id="phone" value="" type="tel" placeholder="Введите Ваш номер телефона">
         </label>
         <button class="button button__form" type="submit" aria-label="Кнопка для подбора велосипеда мечты">Подобрать
           велосипед
@@ -100,7 +100,7 @@
   </div>
   <!-- Основное содержимое страницы -->
   <main class="main">
-    <section class="about about-container" id="about">
+    <section class="about about-container scroll-section" id="about">
       <h2>Несколько фактов о нас</h2>
       <ul class="about__list">
         <li class="about__item">
@@ -122,7 +122,7 @@
       </ul>
     </section>
 
-    <section class="catalog" id="catalog">
+    <section class="catalog scroll-section" id="catalog">
       <div class="catalog__wrapper catalog-container">
         <h2>Виды велосипедов</h2>
         <ul class="catalog__list">
@@ -168,7 +168,7 @@
         </ul>
       </div>
     </section>
-    <section class="video-bike" id="video">
+    <section class="video-bike scroll-section" id="video">
       <div class="video-bike__wrapper video-bike-container">
         <h2>Видео про велосипеды</h2>
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
@@ -194,7 +194,7 @@
   </main>
 
   <!-- Подвал сайта -->
-  <section class="contact contact-container" id="contact">
+  <section class="contact contact-container scroll-section" id="contact">
     <div class="contact__adresses">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
