@@ -70,40 +70,59 @@ navLinks.forEach(function (el, index) {
 });
 
 const form = document.querySelector("form");
-console.log(form);
-form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  validate();
-  // console.log("dfg");
-});
+
+// form.addEventListener("submit", function (evt) {
+//   evt.preventDefault();
+//   validate();
+// });
 
 const name = document.querySelector("#name");
 const phone = document.querySelector("#phone");
 
 function validate() {
+  let isPhoneValid = true;
+  let isNameValid = true;
   if (name.value.length === 0) {
     name.style.color = "red";
     name.value = "*обязательно для заполнения";
-    const x = false;
+    isNameValid = false;
+  } else {
+    const reg = /([А-Яа-яё]{2,23}|[A-Za-z]{2,23})$/;
+    if (!reg.test(name.value)) {
+      name.style.color = "red";
+      name.value = "Имя введено неверно";
+      isNameValid = false;
+    }
   }
 
   if (phone.value.length === 0) {
     phone.style.color = "red";
     phone.value = "*обязательно для заполнения";
-    const y = false;
+    isPhoneValid = false;
+  } else {
+    const reg = /^\d[\d\(\)\ -]{5,14}\d$/;
+    if (!reg.test(phone.value)) {
+      phone.style.color = "red";
+      phone.value = "Номер введен неверно";
+      isPhoneValid = false;
+    }
   }
 
-  if (x && y) {
+  if (!isPhoneValid || !isNameValid) {
     return;
   }
+
+  name.value = "cncbf";
+  phone.value = "234352627";
+  console.log(name, phone);
 }
 
-name.addEventListener("click", function () {
-  name.style.color = "black";
-  name.value = "";
-});
+function createEventListenerClick(element) {
+  element.addEventListener("click", function () {
+    element.style.color = "black";
+    element.value = "";
+  });
+}
 
-phone.addEventListener("click", function () {
-  phone.style.color = "black";
-  phone.value = "";
-});
+createEventListenerClick(name);
+createEventListenerClick(phone);

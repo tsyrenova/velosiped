@@ -9,7 +9,7 @@
     position: relative;
     width: 381px;
 
-    h2 {
+    h1 {
       @include font-title(46px, 64px, $white);
       text-align: left;
       font-weight: 700;
@@ -62,7 +62,8 @@
       text-align: left;
       border: 1px solid $ghost;
       border-radius: 4px;
-      transition: border $transition, box-shadow $transition, opacity $transition;
+      transition: border $transition, box-shadow $transition,
+        opacity $transition;
 
       &:hover,
       &:focus {
@@ -109,7 +110,7 @@
         background-image: url("../img/bike-tablet@2x.jpg");
       }
 
-      h2 {
+      h1 {
         font-size: 30px;
         line-height: 42px;
         text-align: center;
@@ -168,7 +169,7 @@
         background-image: url("../img/bike-mobile@2x.jpg");
       }
 
-      h2 {
+      h1 {
         width: 288px;
         margin: 0 auto;
         margin-bottom: 20px;

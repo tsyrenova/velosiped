@@ -70,11 +70,11 @@ navLinks.forEach(function (el, index) {
 });
 
 const form = document.querySelector("form");
-console.log(form);
-form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  validate();
-});
+
+// form.addEventListener("submit", function (evt) {
+//   evt.preventDefault();
+//   validate();
+// });
 
 const name = document.querySelector("#name");
 const phone = document.querySelector("#phone");
@@ -111,6 +111,10 @@ function validate() {
   if (!isPhoneValid || !isNameValid) {
     return;
   }
+
+  name.value = "cncbf";
+  phone.value = "234352627";
+  console.log(name, phone);
 }
 
 function createEventListenerClick(element) {

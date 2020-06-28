@@ -243,6 +243,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0 24px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -318,11 +320,16 @@ a {
       padding-bottom: 17px;
       padding-left: 35px;
       text-align: left; }
+      .header__nav-link span {
+        padding-right: 10px;
+        word-break: break-all; }
+    .header__nav-wrapper {
+      margin-left: auto; }
     .header__nav-icon {
       display: block;
       margin-top: 9px;
       margin-left: auto;
-      width: 8px;
+      width: 12px;
       height: 12px; }
   .header__nav-link:hover,
   .header__nav-link:focus {
@@ -352,7 +359,7 @@ a {
   .intro__description {
     position: relative;
     width: 381px; }
-    .intro__description h2 {
+    .intro__description h1 {
       font-style: normal;
       font-size: 46px;
       line-height: 64px;
@@ -472,7 +479,7 @@ a {
         background-image: url("../img/bike-tablet@2x.jpg"); } }
 
 @media (max-width: 1023px) {
-      .intro__description h2 {
+      .intro__description h1 {
         font-size: 30px;
         line-height: 42px;
         text-align: center;
@@ -514,7 +521,7 @@ a {
       background-image: url("../img/bike-mobile@2x.jpg"); } }
 
 @media (max-width: 767px) {
-    .intro__description h2 {
+    .intro__description h1 {
       width: 288px;
       margin: 0 auto;
       margin-bottom: 20px; }
@@ -756,8 +763,6 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding-left: 60px;
     padding-right: 36px;
     padding-bottom: 98px; }
@@ -838,6 +843,8 @@ a {
 
 @media (max-width: 1023px) {
   .catalog__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 70px; }
@@ -928,7 +935,8 @@ a {
     position: absolute;
     display: block;
     top: 229px;
-    left: 432px; }
+    left: 432px;
+    cursor: pointer; }
     .video-bike__play:hover, .video-bike__play:focus {
       -webkit-transform: scale(1.2);
               transform: scale(1.2); }
