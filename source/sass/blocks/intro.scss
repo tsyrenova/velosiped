@@ -9,7 +9,7 @@
     position: relative;
     width: 381px;
 
-    h1 {
+    h2 {
       @include font-title(46px, 64px, $white);
       text-align: left;
       font-weight: 700;
@@ -110,7 +110,7 @@
         background-image: url("../img/bike-tablet@2x.jpg");
       }
 
-      h1 {
+      h2 {
         font-size: 30px;
         line-height: 42px;
         text-align: center;
@@ -169,7 +169,7 @@
         background-image: url("../img/bike-mobile@2x.jpg");
       }
 
-      h1 {
+      h2 {
         width: 288px;
         margin: 0 auto;
         margin-bottom: 20px;

@@ -246,13 +246,16 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 24px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
 .header__nav-item {
   margin-bottom: 9px; }
+  .header__nav-item--about {
+    margin-right: 131px; }
+  .header__nav-item--catalog {
+    margin-right: 130px; }
+  .header__nav-item--video {
+    margin-right: 126px; }
 
 .header__nav-link {
   font-style: normal;
@@ -359,7 +362,7 @@ a {
   .intro__description {
     position: relative;
     width: 381px; }
-    .intro__description h1 {
+    .intro__description h2 {
       font-style: normal;
       font-size: 46px;
       line-height: 64px;
@@ -479,7 +482,7 @@ a {
         background-image: url("../img/bike-tablet@2x.jpg"); } }
 
 @media (max-width: 1023px) {
-      .intro__description h1 {
+      .intro__description h2 {
         font-size: 30px;
         line-height: 42px;
         text-align: center;
@@ -521,7 +524,7 @@ a {
       background-image: url("../img/bike-mobile@2x.jpg"); } }
 
 @media (max-width: 767px) {
-    .intro__description h1 {
+    .intro__description h2 {
       width: 288px;
       margin: 0 auto;
       margin-bottom: 20px; }
